@@ -2,7 +2,7 @@
 
 cd ~
 if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
-        echo "Super Retroboy theme was downloaded yet."
+        echo "Super Retroboy theme was downloaded yet"
         echo "Deleting and redownloading..."
         sleep 4
         sudo rm -r "/home/pi/.emulationstation/themes/Super Retroboy/"
