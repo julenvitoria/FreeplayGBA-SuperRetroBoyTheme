@@ -9,5 +9,7 @@ else
 fi
 mkdir tmp
 git clone https://github.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme "/home/pi/tmp" --branch master --depth=1
+echo "COPYING LAUNCHING IMAGES..."
+sleep 3
 cp -R ~/tmp/configs/* /opt/retropie/configs
 sudo rm -r tmp
