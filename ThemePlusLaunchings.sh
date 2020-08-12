@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd ~
-if [ -d /home/pi/.emulationstation/themes/Super Retroboy/ ]; then
+if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
         echo "Directory update addons was created yet. Deleting and redownloading..."
         sudo rm -r "/home/pi/.emulationstation/themes/Super Retroboy/"
 else
