@@ -1,5 +1,16 @@
 #!/bin/bash
 
+if [ -d /etc/emulationstation/themes/Super_Retro_Boy ]; then
+        echo "Old theme directory already exists"
+        echo "Deleting..."
+        sleep 3
+        sudo rm -R /etc/emulationstation/themes/Super_Retro_Boy
+else
+        echo "Old theme directory doesn't exist"
+        echo "Continuing..."
+        sleep 3
+fi
+
 cd ~
 if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
         echo "Super Retroboy theme was downloaded yet"
