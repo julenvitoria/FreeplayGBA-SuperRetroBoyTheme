@@ -1,4 +1,10 @@
 # FreeplayGBA-SuperRetroBoyTheme
-Script to install Super RetroBoy theme from KALEL1981 and launchings
+Script to install [Super RetroBoy theme of KALEL1981](https://github.com/KALEL1981/es-theme-Super-Retroboy) and launchings generateds for each systems
 
-https://github.com/KALEL1981/es-theme-Super-Retroboy
+How to install
+Connect via ssh or insert this command  via terminak on your freeplay
+
+    wget -O- https://raw.githubusercontent.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme/master/ThemePlusLaunchings.sh | bash
+
+
+NOTE:IT IS NECCESARY THAT YOUR GBA HAS INTERNET CONNECTION
