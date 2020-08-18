@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ -d /etc/emulationstation/themes/Super_Retro_Boy ]; then
+if [ -d /etc/emulationstation/themes/Super_Retroboy_Theme ]; then
         echo "Old theme directory already exists"
         echo "Deleting..."
         sleep 3
-        sudo rm -R /etc/emulationstation/themes/Super_Retro_Boy
+        sudo rm -R /etc/emulationstation/themes/Super_Retroboy_Theme
 else
         echo "Old theme directory doesn't exist"
         echo "Continuing..."
