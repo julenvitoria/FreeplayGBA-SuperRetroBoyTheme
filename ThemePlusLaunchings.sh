@@ -38,3 +38,4 @@ echo "COPYING LAUNCHING IMAGES..."
 sleep 3
 cp -R ~/tmp/configs/* /opt/retropie/configs
 sudo rm -r tmp
+~/scripts/multi_switch.sh --ES-RESTART
