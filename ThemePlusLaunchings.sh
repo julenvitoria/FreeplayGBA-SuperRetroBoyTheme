@@ -18,6 +18,9 @@ if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
         sleep 4
         sudo rm -r "/home/pi/.emulationstation/themes/Super Retroboy/"
         sudo mkdir -p "/home/pi/.emulationstation/themes/Super Retroboy/" && sudo git clone https://github.com/KALEL1981/Super_Retroboy_Theme.git "/home/pi/.emulationstation/themes/Super Retroboy/" --branch master --depth=1
+        cd "/opt/retropie/configs/all/emulationstation/themes/Super Retroboy/"
+        sudo sed -i -e 's/<fontSize>0.042/<fontSize>0.06/g' SuperRetroboy.xml
+        
 else
         echo "Downloading Super Retroboy theme..."
         sleep 4
