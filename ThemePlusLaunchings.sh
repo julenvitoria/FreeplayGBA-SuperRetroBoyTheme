@@ -20,7 +20,7 @@ if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
         sudo mkdir -p "/home/pi/.emulationstation/themes/Super Retroboy/" && sudo git clone https://github.com/KALEL1981/Super_Retroboy_Theme.git "/home/pi/.emulationstation/themes/Super Retroboy/" --branch master --depth=1
         cd "/opt/retropie/configs/all/emulationstation/themes/Super Retroboy/"
         sudo sed -i -e 's/<fontSize>0.042/<fontSize>0.06/g' SuperRetroboy.xml
-        sudo sed -i -e 's/<fontSize>0.025/<fontSize>0.35/g' SuperRetroboy.xml
+        sudo sed -i -e 's/<fontSize>0.025/<fontSize>0.035/g' SuperRetroboy.xml
         sudo sed -i -e 's/<fontSize>0.04/<fontSize>0.055/g' SuperRetroboy.xml
 else
         echo "Downloading Super Retroboy theme..."
@@ -28,7 +28,7 @@ else
         sudo mkdir -p "/home/pi/.emulationstation/themes/Super Retroboy/" && sudo git clone https://github.com/KALEL1981/Super_Retroboy_Theme.git "/home/pi/.emulationstation/themes/Super Retroboy/" --branch master --depth=1
         cd "/opt/retropie/configs/all/emulationstation/themes/Super Retroboy/"
         sudo sed -i -e 's/<fontSize>0.042/<fontSize>0.06/g' SuperRetroboy.xml
-        sudo sed -i -e 's/<fontSize>0.025/<fontSize>0.35/g' SuperRetroboy.xml
+        sudo sed -i -e 's/<fontSize>0.025/<fontSize>0.035/g' SuperRetroboy.xml
         sudo sed -i -e 's/<fontSize>0.04/<fontSize>0.055/g' SuperRetroboy.xml
 fi
 cd ~
