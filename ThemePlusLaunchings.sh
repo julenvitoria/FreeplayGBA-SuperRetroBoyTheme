@@ -32,7 +32,12 @@ else
         sudo sed -i -e 's/<fontSize>0.04/<fontSize>0.055/g' SuperRetroboy.xml
 fi
 cd ~
-mkdir tmp
+if [ -d /home/pi/tmp ]; then
+        sudo rm -R /home/pi/tmp
+        mkdir /home/pi/tmp
+else
+        mkdir /home/pi/tmp
+fi
 git clone https://github.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme "/home/pi/tmp" --branch master --depth=1
 echo "COPYING LAUNCHING IMAGES..."
 sleep 3
