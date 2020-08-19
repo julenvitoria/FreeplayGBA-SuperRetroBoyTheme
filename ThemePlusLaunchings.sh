@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /home/pi
 if [ -d /etc/emulationstation/themes/Super_Retroboy_Theme ]; then
         echo "Old theme directory already exists"
         echo "Deleting..."
@@ -10,8 +11,6 @@ else
         echo "Continuing..."
         sleep 3
 fi
-
-cd ~
 if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
         echo "Super Retroboy theme was downloaded yet"
         echo "Deleting and redownloading..."
@@ -31,7 +30,7 @@ else
         sudo sed -i -e 's/<fontSize>0.025/<fontSize>0.035/g' SuperRetroboy.xml
         sudo sed -i -e 's/<fontSize>0.04/<fontSize>0.055/g' SuperRetroboy.xml
 fi
-cd ~
+cd /home/pi
 if [ -d /home/pi/tmp ]; then
         sudo rm -R /home/pi/tmp
         mkdir /home/pi/tmp
@@ -41,6 +40,6 @@ fi
 git clone https://github.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme "/home/pi/tmp" --branch master --depth=1
 echo "COPYING LAUNCHING IMAGES..."
 sleep 3
-cp -R ~/tmp/configs/* /opt/retropie/configs
+cp -R /home/pi/tmp/configs/* /opt/retropie/configs
 sudo rm -r tmp
-~/scripts/multi_switch.sh --ES-RESTART
+/home/pi/scripts/multi_switch.sh --ES-RESTART
