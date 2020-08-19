@@ -8,4 +8,4 @@ Connect via ssh or insert this command  via terminak on your freeplay
     wget -O- https://raw.githubusercontent.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme/master/ThemePlusLaunchings.sh | bash
 
 
-NOTE: IT'S NECCESARY THAT YOUR GBA HAS INTERNET CONNECTION
+NOTE: IT'S NECCESARY THAT YOUR GBA HAS INTERNET CONNECTION.  THIS SCRIPT WORKS WITH ABSOLUTE PATHS.
