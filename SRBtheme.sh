@@ -25,6 +25,8 @@ else
         sudo sed -i -e 's/<fontSize>0.042/<fontSize>0.06/g' SuperRetroboy.xml
         sudo sed -i -e 's/<fontSize>0.025/<fontSize>0.035/g' SuperRetroboy.xml
         sudo sed -i -e 's/<fontSize>0.04/<fontSize>0.055/g' SuperRetroboy.xml
+
+#make temporal directory
 fi
 cd /home/pi
 if [ -d /home/pi/tmp ]; then
@@ -33,9 +35,13 @@ if [ -d /home/pi/tmp ]; then
 else
         mkdir /home/pi/tmp
 fi
+#Download and install launching images
 git clone https://github.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme "/home/pi/tmp" --branch master --depth=1
 echo "COPYING LAUNCHING IMAGES..."
 sleep 3
 cp -R /home/pi/tmp/configs/* /opt/retropie/configs
 sudo rm -r tmp
+#Change theme value on EmulationStation config file
+#sed -i 's/.*<string name="ThemeSet" value=.*/<string name="ThemeSet" value="simple" /> \/>/' /opt/retropie/configs/all/emulationstation/es_settings.cfg
+#Restart EmulationStation
 /home/pi/scripts/multi_switch.sh --ES-RESTART
