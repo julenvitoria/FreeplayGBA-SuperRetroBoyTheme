@@ -2,15 +2,15 @@
 
 cd /home/pi
 if [ -d /etc/emulationstation/themes/Super_Retroboy_Theme ]; then
-        echo "Old theme directory already exists"
-        echo "Deleting..."
-        sleep 3
+        #echo "Old theme directory already exists"
+        #echo "Deleting..."
+        #sleep 3
         sudo rm -R /etc/emulationstation/themes/Super_Retroboy_Theme
 fi
 if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
         echo "Super Retroboy theme was downloaded yet"
         echo "Deleting and redownloading..."
-        sleep 4
+        sleep 2
         sudo rm -r "/home/pi/.emulationstation/themes/Super Retroboy/"
         sudo mkdir -p "/home/pi/.emulationstation/themes/Super Retroboy/" && sudo git clone https://github.com/KALEL1981/Super_Retroboy_Theme.git "/home/pi/.emulationstation/themes/Super Retroboy/" --branch master --depth=1
         cd "/opt/retropie/configs/all/emulationstation/themes/Super Retroboy/"
@@ -19,7 +19,7 @@ if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
         sudo sed -i -e 's/<fontSize>0.04/<fontSize>0.055/g' SuperRetroboy.xml
 else
         echo "Downloading Super Retroboy theme..."
-        sleep 4
+        sleep 2
         sudo mkdir -p "/home/pi/.emulationstation/themes/Super Retroboy/" && sudo git clone https://github.com/KALEL1981/Super_Retroboy_Theme.git "/home/pi/.emulationstation/themes/Super Retroboy/" --branch master --depth=1
         cd "/opt/retropie/configs/all/emulationstation/themes/Super Retroboy/"
         sudo sed -i -e 's/<fontSize>0.042/<fontSize>0.06/g' SuperRetroboy.xml
@@ -41,6 +41,7 @@ echo "COPYING LAUNCHING IMAGES..."
 sleep 3
 cp -R /home/pi/tmp/configs/* /opt/retropie/configs
 sudo rm -r tmp
+echo "Terminated"
 #Change theme value on EmulationStation config file
 #sed -i 's/.*<string name="ThemeSet" value=.*/<string name="ThemeSet" value="simple" /> \/>/' /opt/retropie/configs/all/emulationstation/es_settings.cfg
 #Restart EmulationStation
