@@ -40,7 +40,7 @@ git clone https://github.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme "/home/
 echo "COPYING LAUNCHING IMAGES..."
 sleep 3
 cp -R /home/pi/tmp/configs/* /opt/retropie/configs
-cp -R /home/pi/tmp/systems/* "/home/pi/.emulationstation/themes/Super Retroboy/"
+sudo cp -R /home/pi/tmp/systems/* "/home/pi/.emulationstation/themes/Super Retroboy/"
 sudo rm -r tmp
 echo "Terminated"
 #Change theme value on EmulationStation config file
