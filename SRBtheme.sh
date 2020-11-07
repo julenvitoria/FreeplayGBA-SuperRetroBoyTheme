@@ -48,5 +48,7 @@ sudo rm -r tmp
 echo "Terminated"
 #Change theme value on EmulationStation config file
 sed -i 's/.*<string name="ThemeSet" value=.*/<string name="ThemeSet" value="simple" \/>/' /opt/retropie/configs/all/emulationstation/es_settings.cfg
+#Change theme value on EmulationStation config file
+sed -i 's/.*<string name="TransitionStyle".*/<string name="TransitionStyle" value="instant" \/>/' /opt/retropie/configs/all/emulationstation/es_settings.cfg
 #Restart EmulationStation
 /home/pi/scripts/multi_switch.sh --ES-RESTART
