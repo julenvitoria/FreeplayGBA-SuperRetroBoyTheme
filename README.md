@@ -5,7 +5,7 @@ Script to install [Super RetroBoy theme by KALEL1981](https://github.com/KALEL19
 How to install
 Connect via ssh or insert this command  via terminal on your freeplay
 
-    wget -O- https://raw.githubusercontent.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme/master/ThemePlusLaunchings.sh | bash
+    wget -O- https://raw.githubusercontent.com/julenvitoria/FreeplayGBA-SuperRetroBoyTheme/master/SRBtheme.sh | bash
 
 
 NOTE: IT'S NECCESARY THAT YOUR GBA HAS INTERNET CONNECTION.  THIS SCRIPT WORKS WITH ABSOLUTE PATHS.
